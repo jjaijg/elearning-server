@@ -10,7 +10,7 @@ const PORT = 5000;
 // });
 app.register(require("fastify-cors"), {
   exposedHeaders: "Content-Disposition",
-  origin: "*",
+  // origin: "*",
 });
 app.register(require("fastify-env"), {
   dotenv: true,
