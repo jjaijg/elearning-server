@@ -67,7 +67,8 @@ const startDB = () => {
 const start = async () => {
   try {
     const PORT = process.env.PORT || 5000;
-    await app.listen(PORT);
+    const HOST = process.env.HOST || "localhost";
+    await app.listen(PORT, HOST);
     startDB();
   } catch (error) {
     app.log.error(error);
