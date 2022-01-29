@@ -3,7 +3,6 @@ const mongoose = require("mongoose");
 const multer = require("fastify-multer");
 const app = fastify({ logger: true });
 const path = require("path");
-const PORT = process.env.PORT || 5000;
 // app.register(require("fastify-static"), {
 //   root: path.join(__dirname, ""),
 //   prefix: "/uploads/", // optional: default '/'
@@ -67,6 +66,7 @@ const startDB = () => {
 };
 const start = async () => {
   try {
+    const PORT = process.env.PORT || 5000;
     await app.listen(PORT);
     startDB();
   } catch (error) {
