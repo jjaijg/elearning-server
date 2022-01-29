@@ -1,5 +1,5 @@
 const multer = require("fastify-multer");
-const cloudinary = require("../config/cloudinary.config");
+// const cloudinary = require("../config/cloudinary.config");
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -24,23 +24,23 @@ const upload = multer({
 
 module.exports = {
   upload,
-  uploadFile: (content) => {
-    return new Promise((resolve, reject) => {
-      cloudinary.uploader
-        .upload_stream(
-          {
-            folder: "elearning",
-            resource_type: "pptx",
-          },
-          (error, result) => {
-            if (error) {
-              throw error;
-            } else {
-              resolve(result);
-            }
-          }
-        )
-        .end(content);
-    });
-  },
+  // uploadFile: (content) => {
+  //   return new Promise((resolve, reject) => {
+  //     cloudinary.uploader
+  //       .upload_stream(
+  //         {
+  //           folder: "elearning",
+  //           resource_type: "pptx",
+  //         },
+  //         (error, result) => {
+  //           if (error) {
+  //             throw error;
+  //           } else {
+  //             resolve(result);
+  //           }
+  //         }
+  //       )
+  //       .end(content);
+  //   });
+  // },
 };
