@@ -149,6 +149,7 @@ module.exports = {
         url: req.file.filename,
       });
     } catch (error) {
+      console.log(error);
       reply.code(500).send({
         message: `Could not upload the file: ${req.file.originalname}. ${err}`,
       });

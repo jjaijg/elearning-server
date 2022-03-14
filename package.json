@@ -1,6 +1,6 @@
 {
   "name": "elearning",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -13,8 +13,10 @@
   "license": "ISC",
   "dependencies": {
     "@google-cloud/storage": "^5.18.0",
+    "bcryptjs": "^2.4.3",
     "cloudinary": "^1.28.1",
     "fastify": "^3.26.0",
+    "fastify-auth": "^1.1.0",
     "fastify-cors": "^6.0.2",
     "fastify-env": "^2.1.1",
     "fastify-mongodb": "^4.1.1",
@@ -23,6 +25,7 @@
     "fastify-static": "^4.5.0",
     "fastify-swagger": "^4.13.1",
     "filesize": "^8.0.7",
+    "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.1.7",
     "util": "^0.12.4",
     "uuid": "^8.3.2"
